@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN,en,default">
+
+<head>
+  
+  <title>搭建公主连结QQ机器人教程 - 轻音时雨-鹿友のKICO的主页</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="鹿友のKICO的主页，提供各种自写插件和教程">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+    <!-- Site Verification -->
+    <meta name="google-site-verification" content="mt6wymxp9UkqMawSM8IDTG6lcdZXPGX11GQiqqmebis" />
+
+
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/%E5%9B%BE%E6%A0%87.png" type="image/png" />
+  <meta name="description" content="酷Q框架已倒，本教程为mirai框架">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建公主连结QQ机器人教程">
+<meta property="og:url" content="https://www.594594.xyz/2020/08/08/pcrqqbot/index.html">
+<meta property="og:site_name" content="轻音时雨-鹿友のKICO的主页">
+<meta property="og:description" content="酷Q框架已倒，本教程为mirai框架">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225347.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225424.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225451.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225513.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225543.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225603.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225625.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225640.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225655.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225710.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225727.png">
+<meta property="article:published_time" content="2020-08-08T08:41:37.000Z">
+<meta property="article:modified_time" content="2020-10-30T09:39:34.208Z">
+<meta property="article:author" content="鹿友のKICO">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="公主连接">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225347.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2009331_hzlinkatbup.css">
+  
+  <link rel="stylesheet" href="/css/style.css?v=1616130186828">
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/%E9%BB%98%E8%AE%A4%E8%83%8C%E6%99%AF.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="鹿友のKICO" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/%E5%A4%B4%E5%83%8F.jpg" alt="鹿友のKICO"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="鹿友のKICO">
+            <img src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/%E5%A4%B4%E5%83%8F.jpg" alt="鹿友のKICO" alt="鹿友のKICO">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>22</div>
+        <div><span>标签</span>10</div>
+        <div><span>分类</span>6</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/cloud.html" title="下载站">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                下载站
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="友链">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                友链
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://cn.bing.com/search?q=site:www.594594.com" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/25261599" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/azmiao/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="http://www.coolapk.com/u/2670567" target="_blank" mdui-tooltip="{content: '酷安'}" style="color: rgb(60, 179, 13);background-color: rgba(60, 179, 13, .15);">
+            <i class="nexmoefont icon-calendar-fill"></i>
+        </a><a class="mdui-ripple" href="https://steamcommunity.com/id/2362020227/" target="_blank" mdui-tooltip="{content: 'steam'}" style="color: rgb(100, 100, 100);background-color: rgba(100, 100, 100, .15);">
+            <i class="nexmoefont icon-steam"></i>
+        </a><a class="mdui-ripple" href="https://weibo.com/u/5210506733" target="_blank" mdui-tooltip="{content: '微博'}" style="color: rgb(255, 69, 0);background-color: rgba(255, 69, 0, .15);">
+            <i class="nexmoefont icon-weibo"></i>
+        </a><a class="mdui-ripple" href="https://twitter.com/ezMjKm7GuHb2nRM" target="_blank" mdui-tooltip="{content: '推特'}" style="color: rgb(0, 191, 255);background-color: rgba(0, 191, 255, .15);">
+            <i class="nexmoefont icon-twitter"></i>
+        </a><a class="mdui-ripple" href="https://www.zhihu.com/people/azmiao-73" target="_blank" mdui-tooltip="{content: '知乎'}" style="color: rgb(30, 144, 255);background-color: rgba(30, 144, 255, .15);">
+            <i class="nexmoefont icon-zhihu"></i>
+        </a><a class="mdui-ripple" href="https://www.acfun.cn/u/12725060" target="_blank" mdui-tooltip="{content: 'ACfun'}" style="color: rgb(255, 69, 0);background-color: rgba(255, 69, 0, .15);">
+            <i class="nexmoefont icon-coffee"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/主题/">主题</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/其他/">其他</a>
+          <span class="category-list-count">7</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/小工具/">小工具</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/插件/">插件</a>
+          <span class="category-list-count">6</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/游戏相关/">游戏相关</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/Win10/" style="font-size: 12.5px;">Win10</a> <a href="/tags/magisk%E6%A8%A1%E5%9D%97/" style="font-size: 15px;">magisk模块</a> <a href="/tags/%E5%85%AC%E4%B8%BB%E8%BF%9E%E6%8E%A5/" style="font-size: 10px;">公主连接</a> <a href="/tags/%E5%91%BD%E8%BF%902/" style="font-size: 10px;">命运2</a> <a href="/tags/%E5%B0%8F%E7%B1%B39/" style="font-size: 12.5px;">小米9</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 17.5px;">教程</a> <a href="/tags/%E6%A3%AE%E6%9E%97/" style="font-size: 10px;">森林</a> <a href="/tags/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88/" style="font-size: 10px;">碧蓝档案</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E5%BB%BA%E8%AE%BE/" style="font-size: 20px;">网页建设</a> <a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 15px;">美化</a>
+    </div>
+    
+  </div>
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+
+		
+			<!-- 不蒜子统计 -->
+			<span id="busuanzi_container_site_pv">
+                本站总访问量<span id="busuanzi_value_site_pv"></span>次
+			</span><br><br>
+        
+			<span id="busuanzi_container_site_uv" style='display:none'>
+                本站访客数<span id="busuanzi_value_site_uv"></span>人
+			</span>
+			<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><br><br>
+		
+		
+		<img src="https://pic.baixiongz.com/2020/08/12/1e5305a9e1fa6.png">
+        <a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn">浙ICP备20029920号-1</a><br><br>
+        
+        &copy; 2021 鹿友のKICO
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 56.25%;"> 
+          <img data-src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/pcrqqbot.jpg" data-sizes="auto" alt="搭建公主连结QQ机器人教程" class="lazyload">
+          <h1>搭建公主连结QQ机器人教程</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年08月08日</a>
+    <a><i class="nexmoefont icon-areachart"></i>2.2k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 9 分钟</a>
+    <a><i class="nexmoefont icon-eye-fill"></i>阅读数 <span id="busuanzi_value_page_pv"></span> 次</a>
+</div>
+
+  <div class="nexmoe-post-right">
+    
+  </div>
+
+  <article>
+    <p>酷Q框架已倒，本教程为mirai框架</p>
+<span id="more"></span>
+
+<h2 id="请注意：本文含有搭建教程和魔改教程"><a href="#请注意：本文含有搭建教程和魔改教程" class="headerlink" title="请注意：本文含有搭建教程和魔改教程"></a>请注意：本文含有搭建教程和魔改教程</h2><h2 id="欢迎参观：台三仲夏夜の玉响公会QQ群：1102476774（不过公会比较菜倒是）"><a href="#欢迎参观：台三仲夏夜の玉响公会QQ群：1102476774（不过公会比较菜倒是）" class="headerlink" title="欢迎参观：台三仲夏夜の玉响公会QQ群：1102476774（不过公会比较菜倒是）"></a>欢迎参观：台三仲夏夜の玉响公会QQ群：1102476774（不过公会比较菜倒是）</h2><h2 id="搭建教程（仅有windows-server系统的教程）"><a href="#搭建教程（仅有windows-server系统的教程）" class="headerlink" title="搭建教程（仅有windows server系统的教程）"></a>搭建教程（仅有windows server系统的教程）</h2><h3 id="step-1"><a href="#step-1" class="headerlink" title="step 1"></a>step 1</h3><p>所需的东西：一台windows server服务器,mirai包（github上自己找）</p>
+<p>说明：<br>1.个人自用的是阿里云白嫖的一年ECS云服务器，2H4G1M的，今天刚好续费考试通过<br>2.mirai包个人自用的是某位大佬做的miraiok整合包，由于近期情况较多，不敢直接分享出来，想要的请私信我酷安账号（左边社交按钮里有）<br>3.本人不保证能一直用下去，毕竟tx最近查的很严，若有不解的问题，欢迎在下方评论区回复<br>4.教程部分地方细化了，方便小白食用</p>
+<h3 id="step-2-（用整合包的跳过）"><a href="#step-2-（用整合包的跳过）" class="headerlink" title="step 2 （用整合包的跳过）"></a>step 2 （用整合包的跳过）</h3><p>配置好环境，java环境配置，具体请百度<br>安装mirai-native<br>链接：<a target="_blank" rel="noopener" href="https://github.com/iTXTech/mirai-native">https://github.com/iTXTech/mirai-native</a></p>
+<h3 id="step-3-（用整合包的跳过）"><a href="#step-3-（用整合包的跳过）" class="headerlink" title="step 3 （用整合包的跳过）"></a>step 3 （用整合包的跳过）</h3><p>若你是自己弄的mirai，先装好cqhttp的插件（dll和json格式的）<br>插件存放位置为如图所示的文件夹里，其中http.dll和http.json为cqhttp插件，其他插件也可将dll和json格式文件放入<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225347.png" alt="title.png/jpg" class="lazyload"></p>
+<h3 id="step-4"><a href="#step-4" class="headerlink" title="step 4"></a>step 4</h3><p>安装hoshino<br>链接：<a target="_blank" rel="noopener" href="https://github.com/Ice-Cirno/HoshinoBot">https://github.com/Ice-Cirno/HoshinoBot</a><br>可以按照链接中的方法安装，但推荐按step 5 开始的步骤按照，更为清楚简单</p>
+<h3 id="step-5"><a href="#step-5" class="headerlink" title="step 5"></a>step 5</h3><p>必须安装下面的软件<br>Python 3.8：<a target="_blank" rel="noopener" href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a><br>打开可能会很慢，请慢慢等待</p>
+<p>Git：<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a><br>推荐去这个镜像站<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/git-for-windows/">https://npm.taobao.org/mirrors/git-for-windows/</a><br>下载v2.22.0.windows.1这个版本的</p>
+<p>Notepad++：<a target="_blank" rel="noopener" href="https://notepad-plus-plus.org/downloads/">https://notepad-plus-plus.org/downloads/</a><br>版本随意</p>
+<h3 id="step-6"><a href="#step-6" class="headerlink" title="step 6"></a>step 6</h3><p>打开mirai，稍等一会，会提示让你登陆<br>输入：</p>
+<pre><code>login 123456789 xxxxxx
+</code></pre>
+<p>（其中123456789为你想做成机器人的QQ号，xxxxxx为QQ密码）<br>回车后，第一次登陆会让你验证身份，按照提示验证就好了<br>登陆成功后看右下角有没有出现小猫咪图标，单击右键，出现CQHTTP的字了说明安装成功</p>
+<p>若不成功请重新进行step 2和step 3，看看有没有什么漏掉的和报错说明，如有请百度自行解决<br>如果实在不想解决，请看step 1的说明2</p>
+<p>确认安装成功后，请关闭Mirai</p>
+<h3 id="step-7"><a href="#step-7" class="headerlink" title="step 7"></a>step 7</h3><p>找到这个目录<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225424.png" alt="title.png/jpg" class="lazyload"><br>删除0.json，打开另外一个json文件，这个文件的文件名应该是你的机器人的QQ号<br>将里面东西全部删除，粘贴以下信息进去</p>
+<pre><code>&#123;
+    &quot;$schema&quot;: &quot;https://cqhttp.cc/config-schema.json&quot;,
+    &quot;host&quot;: &quot;0.0.0.0&quot;,
+    &quot;port&quot;: 5700,
+    &quot;use_http&quot;: false,
+    &quot;ws_host&quot;: &quot;0.0.0.0&quot;,
+    &quot;ws_port&quot;: 6700,
+    &quot;use_ws&quot;: false,
+    &quot;X-Self-ID&quot;: &quot;xxxxxx&quot;,
+    &quot;X-Client-Role&quot;: &quot;Universal&quot;,
+    &quot;ws_reverse_url&quot;: &quot;ws://127.0.0.1:2333/ws/&quot;,
+    &quot;ws_reverse_api_url&quot;: &quot;&quot;,
+    &quot;ws_reverse_event_url&quot;: &quot;&quot;,
+    &quot;ws_reverse_reconnect_interval&quot;: 3000,
+    &quot;ws_reverse_reconnect_on_code_1000&quot;: true,
+    &quot;ws_reverse_use_universal_client&quot;: true,
+    &quot;use_ws_reverse&quot;: true,
+    &quot;post_url&quot;: &quot;&quot;,
+    &quot;access_token&quot;: &quot;&quot;,
+    &quot;secret&quot;: &quot;&quot;,
+    &quot;post_message_format&quot;: &quot;string&quot;,
+    &quot;serve_data_files&quot;: false,
+    &quot;update_source&quot;: &quot;global&quot;,
+    &quot;update_channel&quot;: &quot;stable&quot;,
+    &quot;auto_check_update&quot;: false,
+    &quot;auto_perform_update&quot;: false,
+    &quot;show_log_console&quot;: true,
+    &quot;log_level&quot;: &quot;info&quot;
+&#125;
+</code></pre>
+<p>注意：上文中的”ws_reverse_url”: “ws://127.0.0.1:2333/ws/“,其中2333是端口可以随意更改，唯独8080不行，会冲突的</p>
+<p>注意：上文的“”X-Self-ID”: “xxxxxx”,”中的xxxxxx为自己的QQ号</p>
+<h3 id="step-8"><a href="#step-8" class="headerlink" title="step 8"></a>step 8</h3><p>随便找个地方创建一个文件夹，我自己是建了一个叫pcrbot的文件夹，文件夹名字无所谓的<br>选中这个文件夹，点击资源管理器左上角的：文件 ，打开Windows Powershell<br>也可以对这这个文件右键选择git bash here<br>个人推荐使用Windows Powershell，因为git在报错出中文的时候显示会乱码</p>
+<p>然后输入并回车：</p>
+<pre><code>git clone https://github.com/Ice-Cirno/HoshinoBot.git
+</code></pre>
+<p>输入并回车：</p>
+<pre><code>cd HoshinoBot
+</code></pre>
+<p>输入并回车：</p>
+<pre><code>python -m pip install --upgrade pip
+</code></pre>
+<p>输入并回车：</p>
+<pre><code>py -3.8 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+</code></pre>
+<p>若有报错信息，必须将错误信息复制到百度搜索解决后，再重新输入一遍命令</p>
+<h3 id="step-9"><a href="#step-9" class="headerlink" title="step 9"></a>step 9</h3><p>后续和链接里的教程就几乎差不多了，不过请继续看下去<br>回到资源管理器，进入hoshino文件夹，将config_example文件夹重命名为config，打开config文件夹，然后右键使用Notepad++打开其中的-bot-.py</p>
+<p>必须修改的地方：</p>
+<pre><code>PORT=2333
+USE_CQPRO=True
+</code></pre>
+<p>其中2333为上文中可随意更改的数字，必须和上文保持一致</p>
+<p>建议修改的地方：</p>
+<pre><code>SUPERUSERS=[xxxxxxxxx]
+RES_PROTOCOL=&#39;file&#39;
+</code></pre>
+<p>其中xxxxxxxxx为你自己常用的QQ号</p>
+<p>剩下的看其中说明自己看着改<br>后面的模块，前面有#号就是不启用，没有#号就是启用了</p>
+<h3 id="step-10"><a href="#step-10" class="headerlink" title="step 10"></a>step 10</h3><p>文件都保存后，启动mirai<br>和上文一样输入QQ账号密码：</p>
+<pre><code>login 123456789 xxxxxx
+</code></pre>
+<p>进行登陆，请仔细观察是否有报错信息，有些可能不影响大碍，若影响正常使用请百度解决</p>
+<p>选中hoshinobot文件夹（注意别选错了），点击资源管理器左上角的：文件 ，打开Windows Powershell<br>输入：</p>
+<pre><code>py -3.8 run.py
+</code></pre>
+<p>请仔细观察是否有报错信息，有些可能不影响大碍，若影响正常使用请百度解决</p>
+<p>注意，平常日常使用的时候，修改文件后，重启就是按照step 10来的</p>
+<h3 id="step-11"><a href="#step-11" class="headerlink" title="step 11"></a>step 11</h3><p>私聊机器人发送“在？”，若机器人有回复，说明机器人搭建完了</p>
+<p>※注意：后续图片资源和竞技场查询等请看hoshino大佬的github链接的 更进一步<br><a target="_blank" rel="noopener" href="https://github.com/Ice-Cirno/HoshinoBot">https://github.com/Ice-Cirno/HoshinoBot</a></p>
+<h2 id="魔改教程"><a href="#魔改教程" class="headerlink" title="魔改教程"></a>魔改教程</h2><h3 id="必要说明"><a href="#必要说明" class="headerlink" title="必要说明"></a>必要说明</h3><p>Mirai应用数据文件目录：mirai/plugins/MiraiNative/data/xxxx/<br>（xxxx为应用包名）</p>
+<p>Mirai图片目录：mirai/jre/bin/data/image<br>（使用cqhttp的插件，例如上文的hoshino插件，既不会在小猫咪右键界面显示出来，hoshino所需要的图片等资源位置也不一样）</p>
+<p>hoshino图片位置：hoshinobot/res/img</p>
+<h2 id="下方图片里有写文件位置，请注意看"><a href="#下方图片里有写文件位置，请注意看" class="headerlink" title="下方图片里有写文件位置，请注意看"></a>下方图片里有写文件位置，请注意看</h2><h3 id="帮助-菜单-魔改"><a href="#帮助-菜单-魔改" class="headerlink" title="帮助/菜单 魔改"></a>帮助/菜单 魔改</h3><p>自行修改TOP_MANUAL信息<br>位置（见图）：<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225451.png" alt="title.png/jpg" class="lazyload"></p>
+<h3 id="角色数据-更新"><a href="#角色数据-更新" class="headerlink" title="角色数据 更新"></a>角色数据 更新</h3><p>按下图格式修改<br>位置（见图）：<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225513.png" alt="title.png/jpg" class="lazyload"></p>
+<h3 id="抽卡卡池-更新"><a href="#抽卡卡池-更新" class="headerlink" title="抽卡卡池 更新"></a>抽卡卡池 更新</h3><p>按下图格式修改，若其中7改14，25改50，即为概率双倍池<br>other_nomal_star3里的东西可以一直不改，没有影响<br>位置（见图）：<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225543.png" alt="title.png/jpg" class="lazyload"></p>
+<h3 id="查询角色-魔改"><a href="#查询角色-魔改" class="headerlink" title="查询角色 魔改"></a>查询角色 魔改</h3><p>删除查询冷却方法，图中加#号的那行，加上#号就没冷却了<br>位置（见图）：<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225603.png" alt="title.png/jpg" class="lazyload"></p>
+<h3 id="rank表回复-魔改"><a href="#rank表回复-魔改" class="headerlink" title="rank表回复 魔改"></a>rank表回复 魔改</h3><p>图片上方的p1,p2,p3等等可以自己添加修改，强烈建议修改文件名，和hoshinobot/res/img/priconne/quick下的图片名保持一致<br>图片下方的回复也可自行修改，注意p1,p2等东西要一一对应<br>位置（见图）：<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225625.png" alt="title.png/jpg" class="lazyload"></p>
+<h3 id="不理人-魔改"><a href="#不理人-魔改" class="headerlink" title="不理人 魔改"></a>不理人 魔改</h3><p>去除回复固定词汇后，机器人会有8小时不回复的设定<br>按照图片内容修改就行了<br>位置（见图）：<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225640.png" alt="title.png/jpg" class="lazyload"></p>
+<h3 id="概率回复消息-魔改"><a href="#概率回复消息-魔改" class="headerlink" title="概率回复消息 魔改"></a>概率回复消息 魔改</h3><p>如图中的0.2等数字为概率，0.2就是20%的概率回复<br>可自行修改，不要的回复直接删了就行<br>位置（见图）：<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225655.png" alt="title.png/jpg" class="lazyload"></p>
+<h3 id="退群通知-魔改"><a href="#退群通知-魔改" class="headerlink" title="退群通知 魔改"></a>退群通知 魔改</h3><p>如图，“偷偷地退群了”自己改<br>位置（见图）：<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225710.png" alt="title.png/jpg" class="lazyload"></p>
+<h3 id="入群欢迎-魔改"><a href="#入群欢迎-魔改" class="headerlink" title="入群欢迎 魔改"></a>入群欢迎 魔改</h3><p>位置稍微和其他不一样<br>位置（见图）：<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/20200812225727.png" alt="title.png/jpg" class="lazyload"></p>
+<h3 id="其他魔改"><a href="#其他魔改" class="headerlink" title="其他魔改"></a>其他魔改</h3><p>modules文件夹里都是模块，可以自己一一打开修改<br>由于机器人当管理员会再回复一条消息后，自动禁言发言的人，所以不要把机器人设置管理员就好了，所以我没有魔改禁言模块，貌似禁言模块在hoshino/util.py里，可自行琢磨修改</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>目前个人所使用的魔改就这些，后续若有新魔改，会后续加进的</p>
+<p>教程供小白们参考，自身有一定水平的可以直接去看大佬的教程，若不是很清楚的可以下方留言，我大概会回复，因为我不太经常看评论，若急用可以在旁边社交按钮里通过酷安联系我</p>
+<p>需要别的大佬做的mirai整合包也可以联系我，不过毕竟这个东西是别的大佬做的，哪天不能用了或者不让我发了，那我也没办法了</p>
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>教程为我原创，转载请注明地址和出处，若有错误，请在下方评论说明<br>插件，框架等文件东西不是我的，若有侵权，请联系我酷安账号</p>
+
+  </article>
+
+  
+    
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>鹿友のKICO<br>
+    <strong>本文链接：</strong><a href="https://www.594594.xyz/2020/08/08/pcrqqbot/" title="https:&#x2F;&#x2F;www.594594.xyz&#x2F;2020&#x2F;08&#x2F;08&#x2F;pcrqqbot&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;www.594594.xyz&#x2F;2020&#x2F;08&#x2F;08&#x2F;pcrqqbot&#x2F;</a><br>
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可，转载请注明出处
+    
+  </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E6%B8%B8%E6%88%8F%E7%9B%B8%E5%85%B3/">游戏相关</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E5%85%AC%E4%B8%BB%E8%BF%9E%E6%8E%A5/" rel="tag">公主连接</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a>
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='/js/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'lPdYhmy276L8cPnrmoBmWDiE-gzGzoHsz',
+        appKey: 'iTzPRJruM5kc7ePe1nahgMDr'
+    })
+</script>
+</section>
+  </div>
+</div>
+        <div class="nexmoe-post-right">
+          
+        </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<!-- 
+<script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+ <script src="/js/app.js?v=1616130186829"></script> -->
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+  
+
+
+
+
+
+    <!-- baidu Analytics -->
+<script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?a0bf3b8ed44a324388dc830b03e7099c';
+    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+</body>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
+
+<!--浏览器搞笑标题-->
+<script type="text/javascript" src="\js\FunnyTitle.js"></script>
+
+<!-- 雪花特效 -->
+<script type="text/javascript" src="https://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="https://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="\js\snow.js"></script>
+
+</html>

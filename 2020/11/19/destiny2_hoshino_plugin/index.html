@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN,en,default">
+
+<head>
+  
+  <title>命运2查询工具 for hoshinobot - 轻音时雨-鹿友のKICO的主页</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="鹿友のKICO的主页，提供各种自写插件和教程">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+    <!-- Site Verification -->
+    <meta name="google-site-verification" content="mt6wymxp9UkqMawSM8IDTG6lcdZXPGX11GQiqqmebis" />
+
+
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/%E5%9B%BE%E6%A0%87.png" type="image/png" />
+  <meta name="description" content="03-02更新-一个适用hoshinobot的命运2插件，用于查询周报&#x2F;老九等信息">
+<meta property="og:type" content="article">
+<meta property="og:title" content="命运2查询工具 for hoshinobot">
+<meta property="og:url" content="https://www.594594.xyz/2020/11/19/destiny2_hoshino_plugin/index.html">
+<meta property="og:site_name" content="轻音时雨-鹿友のKICO的主页">
+<meta property="og:description" content="03-02更新-一个适用hoshinobot的命运2插件，用于查询周报&#x2F;老九等信息">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/destiny001.jpg">
+<meta property="article:published_time" content="2020-11-19T09:10:12.000Z">
+<meta property="article:modified_time" content="2021-03-02T03:15:01.982Z">
+<meta property="article:author" content="鹿友のKICO">
+<meta property="article:tag" content="命运2">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/destiny001.jpg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2009331_hzlinkatbup.css">
+  
+  <link rel="stylesheet" href="/css/style.css?v=1616130186825">
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/%E9%BB%98%E8%AE%A4%E8%83%8C%E6%99%AF.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="鹿友のKICO" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/%E5%A4%B4%E5%83%8F.jpg" alt="鹿友のKICO"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="鹿友のKICO">
+            <img src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/%E5%A4%B4%E5%83%8F.jpg" alt="鹿友のKICO" alt="鹿友のKICO">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>22</div>
+        <div><span>标签</span>10</div>
+        <div><span>分类</span>6</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/cloud.html" title="下载站">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                下载站
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="友链">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                友链
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://cn.bing.com/search?q=site:www.594594.com" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/25261599" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/azmiao/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="http://www.coolapk.com/u/2670567" target="_blank" mdui-tooltip="{content: '酷安'}" style="color: rgb(60, 179, 13);background-color: rgba(60, 179, 13, .15);">
+            <i class="nexmoefont icon-calendar-fill"></i>
+        </a><a class="mdui-ripple" href="https://steamcommunity.com/id/2362020227/" target="_blank" mdui-tooltip="{content: 'steam'}" style="color: rgb(100, 100, 100);background-color: rgba(100, 100, 100, .15);">
+            <i class="nexmoefont icon-steam"></i>
+        </a><a class="mdui-ripple" href="https://weibo.com/u/5210506733" target="_blank" mdui-tooltip="{content: '微博'}" style="color: rgb(255, 69, 0);background-color: rgba(255, 69, 0, .15);">
+            <i class="nexmoefont icon-weibo"></i>
+        </a><a class="mdui-ripple" href="https://twitter.com/ezMjKm7GuHb2nRM" target="_blank" mdui-tooltip="{content: '推特'}" style="color: rgb(0, 191, 255);background-color: rgba(0, 191, 255, .15);">
+            <i class="nexmoefont icon-twitter"></i>
+        </a><a class="mdui-ripple" href="https://www.zhihu.com/people/azmiao-73" target="_blank" mdui-tooltip="{content: '知乎'}" style="color: rgb(30, 144, 255);background-color: rgba(30, 144, 255, .15);">
+            <i class="nexmoefont icon-zhihu"></i>
+        </a><a class="mdui-ripple" href="https://www.acfun.cn/u/12725060" target="_blank" mdui-tooltip="{content: 'ACfun'}" style="color: rgb(255, 69, 0);background-color: rgba(255, 69, 0, .15);">
+            <i class="nexmoefont icon-coffee"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/主题/">主题</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/其他/">其他</a>
+          <span class="category-list-count">7</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/小工具/">小工具</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/插件/">插件</a>
+          <span class="category-list-count">6</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/游戏相关/">游戏相关</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/Win10/" style="font-size: 12.5px;">Win10</a> <a href="/tags/magisk%E6%A8%A1%E5%9D%97/" style="font-size: 15px;">magisk模块</a> <a href="/tags/%E5%85%AC%E4%B8%BB%E8%BF%9E%E6%8E%A5/" style="font-size: 10px;">公主连接</a> <a href="/tags/%E5%91%BD%E8%BF%902/" style="font-size: 10px;">命运2</a> <a href="/tags/%E5%B0%8F%E7%B1%B39/" style="font-size: 12.5px;">小米9</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 17.5px;">教程</a> <a href="/tags/%E6%A3%AE%E6%9E%97/" style="font-size: 10px;">森林</a> <a href="/tags/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88/" style="font-size: 10px;">碧蓝档案</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E5%BB%BA%E8%AE%BE/" style="font-size: 20px;">网页建设</a> <a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 15px;">美化</a>
+    </div>
+    
+  </div>
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+
+		
+			<!-- 不蒜子统计 -->
+			<span id="busuanzi_container_site_pv">
+                本站总访问量<span id="busuanzi_value_site_pv"></span>次
+			</span><br><br>
+        
+			<span id="busuanzi_container_site_uv" style='display:none'>
+                本站访客数<span id="busuanzi_value_site_uv"></span>人
+			</span>
+			<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><br><br>
+		
+		
+		<img src="https://pic.baixiongz.com/2020/08/12/1e5305a9e1fa6.png">
+        <a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn">浙ICP备20029920号-1</a><br><br>
+        
+        &copy; 2021 鹿友のKICO
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 56.25%;"> 
+          <img data-src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/destiny2.jpg" data-sizes="auto" alt="命运2查询工具 for hoshinobot" class="lazyload">
+          <h1>命运2查询工具 for hoshinobot</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年11月19日</a>
+    <a><i class="nexmoefont icon-areachart"></i>883 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
+    <a><i class="nexmoefont icon-eye-fill"></i>阅读数 <span id="busuanzi_value_page_pv"></span> 次</a>
+</div>
+
+  <div class="nexmoe-post-right">
+    
+  </div>
+
+  <article>
+    <p>03-02更新-一个适用hoshinobot的命运2插件，用于查询周报/老九等信息</p>
+<span id="more"></span>
+
+<h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><p>21-03-02    v2.0    重构部分代码，弃用onebot相关代码，使之适配Mirai v2.2.2及 以上的版本</p>
+<p>21-01-26    v1.2.1  同步网络时间，并修改部分代码，现在可以不用定时任务，直接用了</p>
+<p>20-12-06    v1.2    重构了获取数据的方法，现在可以稳定的自动更新周报等数据了，并且无需登录。另外增加了更新提醒功能，开启方法见下文</p>
+<p>20-11-26    v1.1    修改了周报和老九功能，现在也能正常的自动更新数据了</p>
+<p>20-11-25    v1.0    优化了部分描述</p>
+<h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><p>一个适用hoshinobot的命运2插件，用于查询周报/老九等信息（自动更新）</p>
+<p>数据来自小黑盒，各种功能已分别标记出处，这里鸣谢 @seanalpha 提供了图片</p>
+<p>本插件仅供学习研究使用，插件免费，请勿用于商业用途，一切后果自己承担</p>
+<p>查perk功能近期没啥想法，不想做了。蛛王信息更新受限于小黑盒，小黑盒有时候会没有人更新。</p>
+<p>然后插件可能时不时会诈尸更新，github页面会同步，其他地方可能不会都发布</p>
+<p>v2.0开始为了方便将图片下载至本地了，以为未来可能有啥的功能方便用</p>
+<h3 id="GitHub项目地址"><a href="#GitHub项目地址" class="headerlink" title="GitHub项目地址"></a>GitHub项目地址</h3><p><a target="_blank" rel="noopener" href="https://github.com/azmiao/destiny2_hoshino_plugin">https://github.com/azmiao/destiny2_hoshino_plugin</a></p>
+<h3 id="目前有的功能"><a href="#目前有的功能" class="headerlink" title="目前有的功能"></a>目前有的功能</h3><h3 id="查询周报"><a href="#查询周报" class="headerlink" title="- 查询周报"></a>- 查询周报</h3><h3 id="查询老九"><a href="#查询老九" class="headerlink" title="- 查询老九"></a>- 查询老九</h3><h3 id="查询试炼"><a href="#查询试炼" class="headerlink" title="- 查询试炼"></a>- 查询试炼</h3><h3 id="查询蛛王商店"><a href="#查询蛛王商店" class="headerlink" title="- 查询蛛王商店"></a>- 查询蛛王商店</h3><h3 id="查询光尘商店"><a href="#查询光尘商店" class="headerlink" title="- 查询光尘商店"></a>- 查询光尘商店</h3><h3 id="小黑盒百科链接"><a href="#小黑盒百科链接" class="headerlink" title="- 小黑盒百科链接"></a>- 小黑盒百科链接</h3><h3 id="周报-老九-试炼-蛛王更新提醒"><a href="#周报-老九-试炼-蛛王更新提醒" class="headerlink" title="- 周报/老九/试炼/蛛王更新提醒"></a>- 周报/老九/试炼/蛛王更新提醒</h3><h2 id="需要的东西"><a href="#需要的东西" class="headerlink" title="需要的东西"></a>需要的东西</h2><p>hoshinobot_v2（这篇帖子不提供Hoshino搭建相关的教程）</p>
+<h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><h3 id="step-1"><a href="#step-1" class="headerlink" title="step 1"></a>step 1</h3><p>在 HoshinoBot\hoshino\modules 目录下使用以下命令拉取本项目</p>
+<pre><code>git clone https://github.com/azmiao/destiny2_hoshino_plugin
+</code></pre>
+<p>请耐心等待</p>
+<h3 id="step-2"><a href="#step-2" class="headerlink" title="step 2"></a>step 2</h3><p>到HoshinoBot\hoshino\modules\destiny2_hoshino_plugin目录下，打开powershell运行</p>
+<pre><code>pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+</code></pre>
+<h3 id="step-3"><a href="#step-3" class="headerlink" title="step 3"></a>step 3</h3><p>在 HoshinoBot\hoshino\config\ <code>__bot__.py</code> 文件的 MODULES_ON 加入 ‘destiny2_hoshino_plugin’<br>然后重启 HoshinoBot即可使用</p>
+<h3 id="step-4（额外，建议开启：开启周报-老九-试炼-蛛王更新提醒）"><a href="#step-4（额外，建议开启：开启周报-老九-试炼-蛛王更新提醒）" class="headerlink" title="step 4（额外，建议开启：开启周报/老九/试炼/蛛王更新提醒）"></a>step 4（额外，建议开启：开启周报/老九/试炼/蛛王更新提醒）</h3><p>在某个群里发消息输入下文以开启周报更新提醒（默认设置周三凌晨3点，可自行更改）</p>
+<pre><code>开启 zhoubao-reminder
+</code></pre>
+<p>在某个群里发消息输入下文以开启老九更新提醒（默认设置周六凌晨3点，可自行更改）</p>
+<pre><code>开启 laojiu-reminder
+</code></pre>
+<p>在某个群里发消息输入下文以开启试炼更新提醒（默认设置周三凌晨3点，可自行更改）</p>
+<pre><code>开启 shilian-reminder
+</code></pre>
+<p>在某个群里发消息输入下文以开启蛛王更新提醒（默认设置每天凌晨3点，可自行更改）</p>
+<pre><code>开启 zhuwang-reminder
+</code></pre>
+<p>可以通过发消息输入”lssv”查看这几个功能前面是不是⚪来确认是否开启成功</p>
+<h2 id="完成之后"><a href="#完成之后" class="headerlink" title="完成之后"></a>完成之后</h2><p>效果图（图是以前的，现在一切以实物为准）：<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/azmiao/picture-bed/img/destiny001.jpg" alt="title.png/jpg" class="lazyload"><br>可以通过测试命令确认是否生效<br>命令如下：<br>[命运2帮助] 查询指令</p>
+<p>正式功能：<br>[周报] 查看命运2周报<br>[老九] 查看老九位置和装备<br>[试炼] 查看试炼周报<br>[蛛王] 查看蛛王商店<br>[光尘] 查看光尘商店<br>[百科] 小黑盒百科链接（只是一个链接而已）</p>
+<h2 id="反馈"><a href="#反馈" class="headerlink" title="反馈"></a>反馈</h2><h3 id="反馈请在本博客或github下回复"><a href="#反馈请在本博客或github下回复" class="headerlink" title="反馈请在本博客或github下回复"></a>反馈请在本博客或github下回复</h3>
+  </article>
+
+  
+    
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>鹿友のKICO<br>
+    <strong>本文链接：</strong><a href="https://www.594594.xyz/2020/11/19/destiny2_hoshino_plugin/" title="https:&#x2F;&#x2F;www.594594.xyz&#x2F;2020&#x2F;11&#x2F;19&#x2F;destiny2_hoshino_plugin&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;www.594594.xyz&#x2F;2020&#x2F;11&#x2F;19&#x2F;destiny2_hoshino_plugin&#x2F;</a><br>
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可，转载请注明出处
+    
+  </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E6%B8%B8%E6%88%8F%E7%9B%B8%E5%85%B3/">游戏相关</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E5%91%BD%E8%BF%902/" rel="tag">命运2</a>
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='/js/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'lPdYhmy276L8cPnrmoBmWDiE-gzGzoHsz',
+        appKey: 'iTzPRJruM5kc7ePe1nahgMDr'
+    })
+</script>
+</section>
+  </div>
+</div>
+        <div class="nexmoe-post-right">
+          
+        </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<!-- 
+<script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+ <script src="/js/app.js?v=1616130186826"></script> -->
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+  
+
+
+
+
+
+    <!-- baidu Analytics -->
+<script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?a0bf3b8ed44a324388dc830b03e7099c';
+    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+</body>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
+
+<!--浏览器搞笑标题-->
+<script type="text/javascript" src="\js\FunnyTitle.js"></script>
+
+<!-- 雪花特效 -->
+<script type="text/javascript" src="https://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="https://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="\js\snow.js"></script>
+
+</html>

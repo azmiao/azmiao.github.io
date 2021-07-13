@@ -29,11 +29,11 @@
 <meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-  <link rel="stylesheet" href="/css/style.css?v=1624065138282">
+  <link rel="stylesheet" href="/css/style.css?v=1626192113754">
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2009331_hzlinkatbup.css">
   
-  <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1624065138282">
+  <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1626192113754">
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -57,7 +57,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>24</div>
+        <div><span>文章</span>25</div>
         <div><span>标签</span>10</div>
         <div><span>分类</span>6</div>
     </div>
@@ -154,7 +154,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/小工具/">小工具</a>
-          <span class="category-list-count">5</span>
+          <span class="category-list-count">6</span>
         </li>
 
         
@@ -192,7 +192,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">6</span></li></ul>
     </div>
   </div>
 
@@ -204,6 +204,10 @@
     <h3 class="nexmoe-widget-title">最新文章</h3>
     <div class="nexmoe-widget">
       <ul>
+        
+          <li>
+            <a href="/2021/07/13/clan_search_tw_for_hoshino/">公主连结台服公会战排名查询插件</a>
+          </li>
         
           <li>
             <a href="/2021/05/01/umamusume_news_for_hoshino/">马娘新闻插件 for HoshinoBot</a>
@@ -219,10 +223,6 @@
         
           <li>
             <a href="/2020/12/23/auto_submit_for_HFUT/">今日校园信息收集自动打卡脚本 for 合肥工业大学</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/19/destiny2_hoshino_plugin/">命运2查询工具 for hoshinobot</a>
           </li>
         
       </ul>
@@ -269,7 +269,7 @@
     
     <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2021年05月01日</a>
-    <a><i class="nexmoefont icon-areachart"></i>318 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>324 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
     <a><i class="nexmoefont icon-eye-fill"></i>阅读数 <span id="busuanzi_value_page_pv"></span> 次</a>
 </div>
@@ -284,20 +284,15 @@
 <p>21-05-05    v1.1    代码重写，修复了播报不能用的BUG，现按时间戳排序，今天才发现官网新闻居然不是按照时间顺序排序的</p>
 <p>21-05-01    v1.0    首次测试</p>
 <h2 id="需要的东西"><a href="#需要的东西" class="headerlink" title="需要的东西"></a>需要的东西</h2><p>python 3.8.6<br>hoshinobot</p>
-<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><pre><code>正式功能：
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">正式功能：</span><br><span class="line"></span><br><span class="line">[马娘新闻] 查看最近五条新闻</span><br><span class="line"></span><br><span class="line">（自动推送） 该功能没有命令</span><br></pre></td></tr></table></figure>
 
-[马娘新闻] 查看最近五条新闻
-
-（自动推送） 该功能没有命令
-</code></pre>
 <h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><h3 id="step-1"><a href="#step-1" class="headerlink" title="step 1"></a>step 1</h3><p>在 HoshinoBot\hoshino\modules 目录下使用以下命令拉取本项目</p>
-<pre><code>git clone https://github.com/azmiao/umamusume_news
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;azmiao&#x2F;umamusume_news</span><br></pre></td></tr></table></figure>
+
 <h3 id="step-2"><a href="#step-2" class="headerlink" title="step 2"></a>step 2</h3><p>在 HoshinoBot\hoshino\config\ <code>__bot__.py</code> 文件的 MODULES_ON 加入 ‘umamusume_news’</p>
 <p>然后重启 HoshinoBot</p>
 <h3 id="step-3"><a href="#step-3" class="headerlink" title="step 3"></a>step 3</h3><p>在某个群里发消息输入下文以开启新闻播报</p>
-<pre><code>开启 umamusume-news-poller
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">开启 umamusume-news-poller</span><br></pre></td></tr></table></figure>
 <p>可以通过发消息输入”lssv”查看这个功能前面是不是⚪来确认是否开启成功</p>
 <h3 id="step-4"><a href="#step-4" class="headerlink" title="step 4"></a>step 4</h3><p>初始化完成后就可以正常使用功能了，其他功能可以直接发送’马娘新闻帮助’看</p>
 
@@ -360,7 +355,7 @@
 <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
   -->
 
-<script async src="/js/app.js?v=1624065138284"></script>
+<script async src="/js/app.js?v=1626192113755"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>

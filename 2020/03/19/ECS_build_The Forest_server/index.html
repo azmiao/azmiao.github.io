@@ -30,11 +30,11 @@
 <meta property="article:tag" content="森林">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-  <link rel="stylesheet" href="/css/style.css?v=1624065138304">
+  <link rel="stylesheet" href="/css/style.css?v=1626192113775">
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2009331_hzlinkatbup.css">
   
-  <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1624065138304">
+  <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1626192113775">
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -58,7 +58,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>24</div>
+        <div><span>文章</span>25</div>
         <div><span>标签</span>10</div>
         <div><span>分类</span>6</div>
     </div>
@@ -155,7 +155,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/小工具/">小工具</a>
-          <span class="category-list-count">5</span>
+          <span class="category-list-count">6</span>
         </li>
 
         
@@ -193,7 +193,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">6</span></li></ul>
     </div>
   </div>
 
@@ -205,6 +205,10 @@
     <h3 class="nexmoe-widget-title">最新文章</h3>
     <div class="nexmoe-widget">
       <ul>
+        
+          <li>
+            <a href="/2021/07/13/clan_search_tw_for_hoshino/">公主连结台服公会战排名查询插件</a>
+          </li>
         
           <li>
             <a href="/2021/05/01/umamusume_news_for_hoshino/">马娘新闻插件 for HoshinoBot</a>
@@ -220,10 +224,6 @@
         
           <li>
             <a href="/2020/12/23/auto_submit_for_HFUT/">今日校园信息收集自动打卡脚本 for 合肥工业大学</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/19/destiny2_hoshino_plugin/">命运2查询工具 for hoshinobot</a>
           </li>
         
       </ul>
@@ -284,95 +284,12 @@
 <h2 id="准备内容"><a href="#准备内容" class="headerlink" title="准备内容"></a>准备内容</h2><p>1.服务器一只（大于等于双核4G内存的云服务器或者老电脑都行），建议选用没有cpu限制的,我的阿里云ecs就有限制，老难受了<br>2.steamcmd软件<br>3.一双手</p>
 <h2 id="温馨提醒"><a href="#温馨提醒" class="headerlink" title="温馨提醒"></a>温馨提醒</h2><p>-本教程为steam平台正版服务器，其他服务器不一样不能联机<br>-以下主要讲以windows系统的教程，服务器端请给你的服务器用windows server（自用windows server 2019数据中心版用linux也行，但要装wine，操作较麻烦，而且对小白不太友好，我就不详细介绍了），老电脑就用windows就行<br>-看下面教程有些不知道点哪里的自行百度就知道了<br>重点：windows系统一定要64位！！！！！</p>
 <h2 id="详细教程"><a href="#详细教程" class="headerlink" title="详细教程"></a>详细教程</h2><p>1.云服务器首先自己买好，然后弄好实例，这里不详细介绍，阿里云什么的都有这种基本教程<br>2.进阿里云控制台，找到云服务器实例，点远程连接，记得选用VNC模式（不要用workbench），等待进入系统<br>3.安装steamcmd，百度一搜就搜的到，下载下来安装运行steamcmd.sh<br>4.安装完成后，进入steamcmd，这时候应该显示steam&gt;,所以我们输入login 用户名 密码<br>5.输入完后按回车，他要求你输入验证码，验证码会发到你的邮箱里，直接输入验证码然后回车，出现Logged in OK     Waiting for user info…OK表示登录成功<br>6.设置游戏目录，输入force_install_dir “D:\the forest”      #这个目录随你便<br>7.安装游戏，输入app_update 556450 validate（此处556450是森林这个游戏的服务器版本的ID）<br>8.等待游戏安装完成，输入quit即可退出steamcmd<br>9.找到你的安装目录，点开TheForestDedicatedServer.exe，他就是黑屏的不要慌，等待大概10秒就可以关闭它了，这一步目的是为了创建相应的文件<br>10.在你的云服务器中为TCP打开8766, 27015 和 27016端口，不会的百度，如果是老电脑就为你的路由器打开这三个端口<br>11.先打开显示隐藏文件（不会记得百度），找到C：\ Users \你的电脑账户名称\ AppData \ LocalLow \ SKS \ TheForestDedicatedServer \ ds文件夹，就会发现Server.cfg配置文件，然后打开它<br>12.里面大多数不用改，具体怎么调整请往下看注释2，先讲建议或必须修改的东西：<br>（注意：“//”符号后面的都是注释，不懂干嘛的可以仔细看看，没有“//”符号的那行是可以自己修改的，格式为例如：serverIP空格192.168.2.。。。等等，有些只能填off或On,空格千万不要忘）</p>
-<pre><code>    ServerIP address设置服务器IP，如果你是服务器就写公网ip，如果你使用老电脑就写内网IP）
-    serverIP （这块要修改）
-    
-    Showevent log. Must be set off or on ( 事件记录日志，强烈建议设置为on开启）
-    showLogs on
-    
-    YourSteam account name. blank means anonymous （你的Steam账号令牌，这里详见下方注释1）
-    serverSteamAccount （这块要修改，是很长的一堆字符）
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">   ServerIP address设置服务器IP，如果你是服务器就写公网ip，如果你使用老电脑就写内网IP）</span><br><span class="line">   serverIP （这块要修改）</span><br><span class="line"></span><br><span class="line">Showevent log. Must be set off or on ( 事件记录日志，强烈建议设置为on开启）</span><br><span class="line">   showLogs on</span><br><span class="line"></span><br><span class="line">YourSteam account name. blank means anonymous （你的Steam账号令牌，这里详见下方注释1）</span><br><span class="line">   serverSteamAccount （这块要修改，是很长的一堆字符）</span><br></pre></td></tr></table></figure>
 <p>13.各种东西修改完保存关闭，重新打开TheForestDedicatedServer.exe，等待右下角出现血量饥饿度等东西就代表你服务器开启成功了，请仔细看显示出来的日志有没有问题</p>
 <h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><h3 id="注释1"><a href="#注释1" class="headerlink" title="注释1"></a>注释1</h3><p>你需要在 <a target="_blank" rel="noopener" href="https://steamcommunity.com/dev/managegameservers">https://steamcommunity.com/dev/managegameservers</a> 中为你的服务器创建一个账号。游戏The Forest 的appid是242760,然后复制你的登录令牌到配置文件Server.cfg的serverSteamAccount后面，否则打开TheForestDedicatedServer.exe会提示无法连接到steam</p>
 <h3 id="注释2"><a href="#注释2" class="headerlink" title="注释2"></a>注释2</h3><p>以下为配置文档几乎所有信息，部分我也不知道干嘛用的，只能你自己理解了</p>
-<pre><code>    Dedicated Server Settings.
-    
-    ServerIP address - Note: If you have a router, this address is the internal address,and you need to configure ports forwarding （设置服务器IP）
-    serverIP192.168.1.
-    
-    SteamCommunication Port - Note: If you have a router you will need to open thisport. (Steam端口，需要打开该端口，方法上面写了）
-    serverSteamPort8766
-    
-    GameCommunication Port - Note: If you have a router you will need to open thisport. (同上)
-    serverGamePort27015
-    
-    QueryCommunication Port - Note: If you have a router you will need to open thisport. (同上)
-    serverQueryPort27016
-    
-    Serverdisplay name （服务器显示的名字）
-    serverName 
-    
-    Maximumnumber of players (允许加入服务器的最多玩家数）
-    serverPlayers 8
-    
-    EnableVAC (Valve Anti-cheat System at the server. Must be set off or on （是否允许作弊）
-    enableVACon
-    
-    Serverpassword. blank means no password （服务器密码，空着表示没密码）
-    serverPassword
-    
-    Serveradministration password. blank means no password（服务器管理员密码，空着表示没密码）
-    serverPasswordAdmin
-    
-    YourSteam account name. blank means anonymous （你的Steam令牌）
-    serverSteamAccount
-    
-    Timebetween server auto saves in minutes - The minumum time is 15 minutes, thedefault time is 30 （自动保存时间间隔，最短15分钟，默认30分钟）
-    serverAutoSaveInterval15
-    
-    Gamedifficulty mode. Must be set to Peaceful Normal or Hard（游戏难度，和平Peaceful、一般Normal或困难Hard）
-    difficultyNormal
-    
-    New orcontinue a game. Must be set to New or Continue（玩家进入服务器后是新开还是继续，建议设置为继续continue）
-    initTypeContinue
-    
-    Slot tosave the game. Must be set 1 2 3 4 or 5 (保存位置）
-    slot 1
-    
-    Showevent log. Must be set off or on ( 事件记录日志）
-    showLogs on
-    
-    Contactemail for server admin （管理员邮箱）
-    serverContact
-    
-    Noenemies (有无野人)
-    veganModeoff
-    
-    Noenemies during day time (白天有无野人)
-    vegetarianModeoff
-    
-    Resetall structure holes when loading a save (加载存档时是否刷新地下洞穴的物品和怪)
-    resetHolesModeoff
-    
-    Regrow10% of cut down trees when sleeping（是否允许在玩家睡觉时使被砍倒的树木生长10%）
-    treeRegrowModeoff
-    
-    Allowbuilding destruction（是否允许建筑物损毁）
-    allowBuildingDestructionon
-    
-    Allowenemies in creative games（创造模式下是否允许有野人）
-    allowEnemiesCreativeModeoff
-    
-    Allowsdefining a custom folder for save slots, leave empty to use the defaultlocation （允许自定义保存文档位置，空白为默认位置）
-    saveFolderPath 
-    
-    Target FPS when no client is connected （服务器内没玩家的时候设置刷新率，这个我真没动啥意思）
-    targetFpsIdle 5
-    
-    Target FPS when there is at least one client connected （服务器内至少1个玩家连线时服务器刷新率，这个一般默认就好了吧）
-    targetFpsActive 60
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">Dedicated Server Settings.</span><br><span class="line"></span><br><span class="line">ServerIP address - Note: If you have a router, this address is the internal address,and you need to configure ports forwarding （设置服务器IP）</span><br><span class="line">serverIP192.168.1.</span><br><span class="line"></span><br><span class="line">SteamCommunication Port - Note: If you have a router you will need to open thisport. (Steam端口，需要打开该端口，方法上面写了）</span><br><span class="line">serverSteamPort8766</span><br><span class="line"></span><br><span class="line">GameCommunication Port - Note: If you have a router you will need to open thisport. (同上)</span><br><span class="line">serverGamePort27015</span><br><span class="line"></span><br><span class="line">QueryCommunication Port - Note: If you have a router you will need to open thisport. (同上)</span><br><span class="line">serverQueryPort27016</span><br><span class="line"></span><br><span class="line">Serverdisplay name （服务器显示的名字）</span><br><span class="line">serverName </span><br><span class="line"></span><br><span class="line">Maximumnumber of players (允许加入服务器的最多玩家数）</span><br><span class="line">serverPlayers 8</span><br><span class="line"></span><br><span class="line">EnableVAC (Valve Anti-cheat System at the server. Must be set off or on （是否允许作弊）</span><br><span class="line">enableVACon</span><br><span class="line"></span><br><span class="line">Serverpassword. blank means no password （服务器密码，空着表示没密码）</span><br><span class="line">serverPassword</span><br><span class="line"></span><br><span class="line">Serveradministration password. blank means no password（服务器管理员密码，空着表示没密码）</span><br><span class="line">serverPasswordAdmin</span><br><span class="line"></span><br><span class="line">YourSteam account name. blank means anonymous （你的Steam令牌）</span><br><span class="line">serverSteamAccount</span><br><span class="line"></span><br><span class="line">Timebetween server auto saves in minutes - The minumum time is 15 minutes, thedefault time is 30 （自动保存时间间隔，最短15分钟，默认30分钟）</span><br><span class="line">serverAutoSaveInterval15</span><br><span class="line"></span><br><span class="line">Gamedifficulty mode. Must be set to Peaceful Normal or Hard（游戏难度，和平Peaceful、一般Normal或困难Hard）</span><br><span class="line">difficultyNormal</span><br><span class="line"></span><br><span class="line">New orcontinue a game. Must be set to New or Continue（玩家进入服务器后是新开还是继续，建议设置为继续continue）</span><br><span class="line">initTypeContinue</span><br><span class="line"></span><br><span class="line">Slot tosave the game. Must be set 1 2 3 4 or 5 (保存位置）</span><br><span class="line">slot 1</span><br><span class="line"></span><br><span class="line">Showevent log. Must be set off or on ( 事件记录日志）</span><br><span class="line">showLogs on</span><br><span class="line"></span><br><span class="line">Contactemail for server admin （管理员邮箱）</span><br><span class="line">serverContact</span><br><span class="line"></span><br><span class="line">Noenemies (有无野人)</span><br><span class="line">veganModeoff</span><br><span class="line"></span><br><span class="line">Noenemies during day time (白天有无野人)</span><br><span class="line">vegetarianModeoff</span><br><span class="line"></span><br><span class="line">Resetall structure holes when loading a save (加载存档时是否刷新地下洞穴的物品和怪)</span><br><span class="line">resetHolesModeoff</span><br><span class="line"></span><br><span class="line">Regrow10% of cut down trees when sleeping（是否允许在玩家睡觉时使被砍倒的树木生长10%）</span><br><span class="line">treeRegrowModeoff</span><br><span class="line"></span><br><span class="line">Allowbuilding destruction（是否允许建筑物损毁）</span><br><span class="line">allowBuildingDestructionon</span><br><span class="line"></span><br><span class="line">Allowenemies in creative games（创造模式下是否允许有野人）</span><br><span class="line">allowEnemiesCreativeModeoff</span><br><span class="line"></span><br><span class="line">Allowsdefining a custom folder for save slots, leave empty to use the defaultlocation （允许自定义保存文档位置，空白为默认位置）</span><br><span class="line">saveFolderPath </span><br><span class="line"></span><br><span class="line">Target FPS when no client is connected （服务器内没玩家的时候设置刷新率，这个我真没动啥意思）</span><br><span class="line">targetFpsIdle 5</span><br><span class="line"></span><br><span class="line">Target FPS when there is at least one client connected （服务器内至少1个玩家连线时服务器刷新率，这个一般默认就好了吧）</span><br><span class="line">targetFpsActive 60</span><br></pre></td></tr></table></figure>
+
 <h2 id="进入服务器游玩方法"><a href="#进入服务器游玩方法" class="headerlink" title="进入服务器游玩方法"></a>进入服务器游玩方法</h2><p>1.进入森林the forest游戏<br>2.多人游戏-联机游戏-专用（互联网）<br>3.左下角搜索你服务器名字，搜到了就是ok,没搜到就是你服务器没开启成功，如果继续玩存档就点继续，输入密码，再点继续，进去就可以玩了</p>
 <h2 id="游戏注意"><a href="#游戏注意" class="headerlink" title="游戏注意"></a>游戏注意</h2><p>1.服务器会自动保存，但你自己角色信息要自己找房子保存<br>2.服务器整个的存档位置位于你服务器C：\Users\你的电脑账户名称\AppData\LocalLow\SKS\TheForestDedicatedServer\ds\Multiplayer\shot1（或者2/3/4/5）下面全是，可以复制到其他电脑上用<br>3.每个人自己的信息存档位于你自己本地电脑C:\Users\你的电脑账户名称\AppData\LocalLow\SKS\TheForest\一窜数字\Multiplayer\cs下的那一个文件，也可以复制到其他人那里用<br>4.如注意2和3所说的shot1（或者2/3/4/5）文件夹是主机存档，其文件夹下有个叫guid的文件，记事本打开显示的那窜数字就是你cs文件夹下个人存档的文件名，换不同服务器的时候注意下，数串一样使才能识别出来</p>
 
@@ -435,7 +352,7 @@
 <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
   -->
 
-<script async src="/js/app.js?v=1624065138305"></script>
+<script async src="/js/app.js?v=1626192113777"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
